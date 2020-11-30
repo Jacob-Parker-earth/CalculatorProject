@@ -20,10 +20,8 @@ int Modulo(int a, int b) {
 }
 
 // prompt user for first and second operand of chosen operation.
-int GetPlayerNum(int a, int b) {
-	std::cout << "\nPlease enter first operand: ";
+int GetPlayerNum(int a) {
+	std::cout << "\nPlease enter operand: ";
 	std::cin >> a;
-	std::cout << "\nPlease enter second operand: ";
-	std::cin >> b;
-	return(a, b);
+	return(a);
 }

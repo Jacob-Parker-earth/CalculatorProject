@@ -13,7 +13,7 @@ int Subtraction(int a, int b);
 int Multiplication(int a, int b);
 int Division(int a, int b);
 int Modulo(int a, int b);
-int GetPlayerNum(int a, int b);
+int GetPlayerNum(int a);
 void DisplayChoices();
 
 void main() {
@@ -35,6 +35,7 @@ void main() {
 		stageTwo = true;
 	}
 	stageOne = false;
+
 // Stage Two
 	if (stageTwo == true) {
 		while (programRunning == true) {
@@ -45,31 +46,36 @@ void main() {
 
 			case 1:
 				// TODO: check over a, b functionality for GetPlayNum
-				a, b = GetPlayerNum(a, b);
+				a = GetPlayerNum(a);
+				b = GetPlayerNum(b);
 				std::cout << "\nAnswer:" << Addition(a, b) << std::endl;
 				stageThree = true;
 				break;
 
 			case 2:
-				a, b = GetPlayerNum(a, b);
+				a = GetPlayerNum(a);
+				b = GetPlayerNum(b);
 				std::cout << "\nAnswer:" << Subtraction(a, b) << std::endl;
 				stageThree = true;
 				break;
 
 			case 3:
-				a, b = GetPlayerNum(a, b);
+				a = GetPlayerNum(a);
+				b = GetPlayerNum(b);
 				std::cout << "\nAnswer:" << Multiplication(a, b) << std::endl;
 				stageThree = true;
 				break;
 
 			case 4:
-				a, b = GetPlayerNum(a, b);
+				a = GetPlayerNum(a);
+				b = GetPlayerNum(b);
 				std::cout << "\nAnswer:" << Division(a, b) << std::endl;
 				stageThree = true;
 				break;
 
 			case 5:
-				GetPlayerNum(a, b);
+				a = GetPlayerNum(a);
+				b = GetPlayerNum(b);
 				std::cout << "\nAnswer:" << Modulo(a, b) << std::endl;
 				stageThree = true;
 				break;
@@ -82,6 +88,7 @@ void main() {
 		}
 	}
 	stageTwo = false;
+
 // STAGE THREE
 	if (stageThree == true) {
 		std::cout << "\n\nAnswer Recieved, Do you require furthur calculation?(y/n)" << std::endl;
@@ -96,9 +103,8 @@ void main() {
 	}
 
 // Stage Four
-
 	if (stageFour == true) {
-		std::cout << "\n\nExiting program..." << std::endl;
+		std::cout << "\n\nExiting program...\n" << std::endl;
 		return;
 	}
 
